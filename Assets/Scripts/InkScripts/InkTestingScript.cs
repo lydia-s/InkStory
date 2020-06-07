@@ -17,6 +17,10 @@ public class InkTestingScript : MonoBehaviour
     public List<string> saveSlots;
     public GameObject scrollList;
     public Button saveSlot;
+    public bool hasLoadedButtons = false;
+    public string currentScene;//name of scene
+    public List<string> currentCharacters;//list of character names in scene
+    public List<string> storyLog;//log of all previous text
     // Start is called before the first frame update
     void Start()
     {
@@ -37,33 +41,52 @@ public class InkTestingScript : MonoBehaviour
         story.ResetState();
         RefreshUI();
     }
-    public IEnumerator KeepLoadingStory()
-    {
-        while (story.canContinue)
+    //get scene name and characters from tags
+    public void UpadateSceneAndCharacters() {
+        List<string> tags = story.currentTags;
+        if (tags.Count > 0)
         {
-            
-            yield return new WaitForSecondsRealtime(0.01f);//stop error where multiple buttons appear
-            string text = story.Continue();
-            List<string> tags = story.currentTags;
-            if (tags.Count > 0)
-            {
-                storyText.text = tags[0] + " - " + text;
-                Debug.Log(tags[0] + " - " + text);
+            currentScene = tags[0];;
+            for (int i = 1; i < tags.Count; i++) {
+                currentCharacters.Add(tags[i]);
             }
-            else
-            {
-                storyText.text = text;
-            }
-            yield return new WaitUntil(() => Input.GetMouseButtonDown(1));
 
         }
-        if (story.currentChoices.Count!=0) {
-            LoadButtons();
-            yield return null;
-        }
-       
 
     }
+    public void KeepLoadingStory()
+    {
+        if (story.canContinue)
+        {
+            string text = story.Continue();
+            storyText.text = text;
+            storyLog.Add(text);//add to log
+            UpadateSceneAndCharacters();
+        }
+        else
+        {
+            if ((story.currentChoices.Count != 0) && !hasLoadedButtons)
+            {
+                Debug.Log("LOAD THE FUCKING BUTTONS!");
+                hasLoadedButtons = true;
+                LoadButtons();
+
+            }
+        }
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            KeepLoadingStory();
+        }
+        
+
+    }
+
+
     public void LoadButtons() {
         foreach (Choice choice in story.currentChoices)
         {
@@ -79,13 +102,13 @@ public class InkTestingScript : MonoBehaviour
             
         }
     }
-
+    //refresh the ui after a load or button press
     public void RefreshUI()
     {
+        hasLoadedButtons = false;
         EraseUI();
-        var savedState = story.state.ToJson();
-        story.state.LoadJson(savedState);
-        StartCoroutine(KeepLoadingStory());
+        storyState = story.state.ToJson();
+        story.state.LoadJson(storyState);
     }
 
     void ChooseStoryChoice(Choice choice)
@@ -104,18 +127,23 @@ public class InkTestingScript : MonoBehaviour
     }
     //load from binary file
     public void LoadStory(string filename) {
-        
+        hasLoadedButtons = false;
         SaveData data = SaveSystem.LoadData(filename);
         storyState = data.saveState;
+        currentScene = data.currentScene;//get last scene
+        currentCharacters = data.currentCharacters;//get last characters
+        story.state.LoadJson(storyState);
         RefreshUI();
     }
 
     //save to binary file
     public string lastFilename;
+
+    //save to binary file
     public void SaveStory() {
         string filename = GenerateFileName();
         SaveSystem.SaveSlotList(this);//update save slot list
-        storyState = story.state.ToJson();
+        storyState = story.state.ToJson();//save story state
         SaveSystem.SaveData(this, filename);
     }
     //generate unique filename

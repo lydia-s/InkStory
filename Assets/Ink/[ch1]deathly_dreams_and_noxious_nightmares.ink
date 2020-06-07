@@ -5,10 +5,10 @@ VAR herbalist = "Emilia"
 VAR priest = "Father Gregor"
 VAR wizard = "Kasien"
  
-I trudged through the forest, wind whipped my hair and chilled my skin. 
-My legs ached, it was a torment I was quite familiar with. As a soldier I'd marched for days with no sleep, little food or water. 
-I'd fought for my country and when it was all over they tossed me aside like a blunted sword. 
-There was peace now, no one knew for how long. At least what the kings considered peace. We still had to pick up the pieces, restore the aftermath. 
+I trudged through the forest, wind whipped my hair and chilled my skin.#forest#Lydia#Kasien#Emilia#Fred#Mabel#Jasper#Gregoire
+My legs ached, it was a torment I was quite familiar with. As a soldier I'd marched for days with no sleep, little food or water.
+I'd fought for my country and when it was all over they tossed me aside like a blunted sword.
+There was peace now, no one knew for how long. At least what the kings considered peace. We still had to pick up the pieces, restore the aftermath.
 For me there was no rest. Now I was just another man, I had no income, no food, no roof over my head. I was forced to move from town to town seeking refuge and work. 
 People were not as friendly as I'd hoped, but that was life.
 I navigated rocky terrain, uncertain of my bearings. I spotted a stream and knew this was my chance. There were usually settlings by water sources, if I could get to the end of this one I would strike gold.
@@ -44,7 +44,7 @@ The only woman is the barmaid who was very modestly dressed, she had a matronly 
 I passed the barkeeper a coin and he poured me a mug of dark liquid. I took a sip. It was slighlty sweet, fruity and a bit earthy. It was probably the best ale I'd ever had.
 ->at_the_inn_01
 * Talk to the barkeeper 
-{player_name}: "Hello good man, what do they call you?"
+{player_name}: "Hello good man, what do they call you?"#Inn#Fred#Lydia
 ???: "I won't be giving my name to no stranger"
 {player_name}: "Well that can easily be sorted, I'm {player_name}, I was a soldier."
 I show him the cheap coppery medal they gave me as some kind of shit compensation

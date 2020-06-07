@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\InkScripts\InkTestingScript.cs" />
+    <Compile Include="Assets\Scripts\MakePersistant.cs" />
     <Compile Include="Assets\Scripts\SaveData.cs" />
     <Compile Include="Assets\Scripts\SaveSlotList.cs" />
     <Compile Include="Assets\Scripts\SaveSystem.cs" />

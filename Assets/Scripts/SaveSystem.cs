@@ -3,6 +3,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 public class SaveSystem 
 {
+    //data for a save file
     public static void SaveData(InkTestingScript script, string filename) {
         BinaryFormatter formatter = new BinaryFormatter();
         //System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")

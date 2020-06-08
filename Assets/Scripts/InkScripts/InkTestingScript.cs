@@ -28,7 +28,8 @@ public class InkTestingScript : MonoBehaviour
         saveSlots = slots.saveSlots;
         PopulateScrollList();
         story = new Story(inkJSON.text);
-        RefreshUI();
+        storyState = story.state.ToJson();//save story state
+        //RefreshUI();
 
     }
     public void PopulateScrollList() {
@@ -36,7 +37,7 @@ public class InkTestingScript : MonoBehaviour
             CreateSaveSlot(filename);
         }
     }
-    public void ResetState()
+    public void ResetStoryState()
     {
         story.ResetState();
         RefreshUI();
@@ -58,6 +59,7 @@ public class InkTestingScript : MonoBehaviour
     {
         if (story.canContinue)
         {
+            
             string text = story.Continue();
             storyText.text = text;
             storyLog.Add(text);//add to log
@@ -65,9 +67,9 @@ public class InkTestingScript : MonoBehaviour
         }
         else
         {
+
             if ((story.currentChoices.Count != 0) && !hasLoadedButtons)
             {
-                Debug.Log("LOAD THE FUCKING BUTTONS!");
                 hasLoadedButtons = true;
                 LoadButtons();
 
@@ -107,8 +109,8 @@ public class InkTestingScript : MonoBehaviour
     {
         hasLoadedButtons = false;
         EraseUI();
-        storyState = story.state.ToJson();
-        story.state.LoadJson(storyState);
+        //storyState = story.state.ToJson();
+        //story.state.LoadJson(storyState);
     }
 
     void ChooseStoryChoice(Choice choice)
@@ -142,7 +144,6 @@ public class InkTestingScript : MonoBehaviour
     //save to binary file
     public void SaveStory() {
         string filename = GenerateFileName();
-        SaveSystem.SaveSlotList(this);//update save slot list
         storyState = story.state.ToJson();//save story state
         SaveSystem.SaveData(this, filename);
     }
@@ -161,10 +162,11 @@ public class InkTestingScript : MonoBehaviour
         lastFilename = filename;
         CreateSaveSlot(filename);
         saveSlots.Add(filename);//add new filename to list
+        SaveSystem.SaveSlotList(this);//update save slot list
         return filename;
     }
-        
 
+    
     
     //spawn visible save slot in scroll list
     public void CreateSaveSlot(string filename) {

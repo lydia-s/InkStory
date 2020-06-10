@@ -14,7 +14,6 @@ public class InkTestingScript : MonoBehaviour
     public TextMeshProUGUI storyText;
     public Button buttonPrefab;
     public string storyState="";
-    public List<string> saveSlots;
     public GameObject scrollList;
     public Button saveSlot;
     public bool hasLoadedButtons = false;
@@ -24,25 +23,45 @@ public class InkTestingScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SaveSlotList slots = SaveSystem.LoadSlotList();
-        saveSlots = slots.saveSlots;
         PopulateScrollList();
         story = new Story(inkJSON.text);
         storyState = story.state.ToJson();//save story state
         //RefreshUI();
 
     }
-    public void PopulateScrollList() {
-        foreach (string filename in saveSlots) {
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            KeepLoadingStory();
+        }
+
+
+    }
+
+    /// <summary>
+    /// Populate a list with save slot buttons
+    /// </summary>
+
+    public void PopulateScrollList()
+    {
+        string folderpath = Application.persistentDataPath + "/" + "saves";
+        foreach (string filepath in Directory.GetFiles(folderpath))
+        {
+            string filename = filepath.Replace(folderpath, "").Replace(@"\", "").Replace(".story", "");//just get filename
             CreateSaveSlot(filename);
         }
     }
+
+    //Reset the state of the story, bring it back to the beginning
     public void ResetStoryState()
     {
         story.ResetState();
         RefreshUI();
     }
-    //get scene name and characters from tags
+    /// <summary>
+    /// Get scene name and characters from tags
+    /// </summary>
     public void UpadateSceneAndCharacters() {
         List<string> tags = story.currentTags;
         if (tags.Count > 0)
@@ -55,6 +74,9 @@ public class InkTestingScript : MonoBehaviour
         }
 
     }
+    /// <summary>
+    /// Continue loading story until a choice is available
+    /// </summary>
     public void KeepLoadingStory()
     {
         if (story.canContinue)
@@ -77,18 +99,9 @@ public class InkTestingScript : MonoBehaviour
         }
     }
 
-
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(1))
-        {
-            KeepLoadingStory();
-        }
-        
-
-    }
-
-
+    /// <summary>
+    /// Load buttons instantiates a save slot to a list and gives it a listener
+    /// </summary>
     public void LoadButtons() {
         foreach (Choice choice in story.currentChoices)
         {
@@ -104,21 +117,26 @@ public class InkTestingScript : MonoBehaviour
             
         }
     }
-    //refresh the ui after a load or button press
+    /// <summary>
+    /// Refresh the UI after a load or button press
+    /// </summary>
     public void RefreshUI()
     {
         hasLoadedButtons = false;
         EraseUI();
-        //storyState = story.state.ToJson();
-        //story.state.LoadJson(storyState);
     }
-
+    /// <summary>
+    /// Select the corresponding choice in ink as the button pressed
+    /// </summary>
+    /// <param name="choice"></param>
     void ChooseStoryChoice(Choice choice)
     {
         story.ChooseChoiceIndex(choice.index);
         RefreshUI();  
     }
-
+    /// <summary>
+    /// Destroy buttons that are children of the choices object
+    /// </summary>
     void EraseUI()
     {
         for (int i = 0; i< this.transform.childCount; i++)
@@ -127,7 +145,9 @@ public class InkTestingScript : MonoBehaviour
         }
         storyText.text = "";
     }
-    //load from binary file
+    /// <summary>
+    /// Load an ink save state json string from a binary file 
+    /// </summary>
     public void LoadStory(string filename) {
         hasLoadedButtons = false;
         SaveData data = SaveSystem.LoadData(filename);
@@ -140,14 +160,18 @@ public class InkTestingScript : MonoBehaviour
 
     //save to binary file
     public string lastFilename;
-
-    //save to binary file
+    /// <summary>
+    /// Save to binary file
+    /// </summary>
     public void SaveStory() {
         string filename = GenerateFileName();
         storyState = story.state.ToJson();//save story state
         SaveSystem.SaveData(this, filename);
+        CreateSaveSlot(filename);
     }
-    //generate unique filename
+    /// <summary>
+    /// Generate unique filename
+    /// </summary>
     public string GenerateFileName()
     {
         string format = "yyyy-MM-dd HH,mm,ss";
@@ -160,15 +184,12 @@ public class InkTestingScript : MonoBehaviour
             }
         }
         lastFilename = filename;
-        CreateSaveSlot(filename);
-        saveSlots.Add(filename);//add new filename to list
-        SaveSystem.SaveSlotList(this);//update save slot list
         return filename;
     }
 
-    
-    
-    //spawn visible save slot in scroll list
+    /// <summary>
+    /// Spawn visible save slot in scroll list
+    /// </summary>
     public void CreateSaveSlot(string filename) {
         Button newButton = Instantiate(saveSlot) as Button;
         newButton.transform.SetParent(scrollList.transform, false);
@@ -177,8 +198,6 @@ public class InkTestingScript : MonoBehaviour
             string file = newButton.GetComponentInChildren<Text>().text;
             LoadStory(file);
             RefreshUI();
-            
-
         });
     }
 

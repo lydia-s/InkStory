@@ -10,7 +10,7 @@ public class DeleteSave : MonoBehaviour
     public void DeleteSelf() {     
         Destroy(saveSlotButton);
         string filename = saveSlotButton.GetComponentInChildren<Text>().text;
-        string path = Application.persistentDataPath + "/" + filename + ".story";
+        string path = Application.persistentDataPath + "/" + "saves" + "/" + filename + ".story";
         if (File.Exists(path)) {
             File.Delete(path);
         }

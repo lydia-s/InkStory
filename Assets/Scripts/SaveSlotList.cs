@@ -5,9 +5,9 @@ using UnityEngine;
 public class SaveSlotList
 {
 
-    public List<string> saveSlots;
+    //public List<string> saveSlots;
 
-    public SaveSlotList(InkTestingScript script) {
-        saveSlots = script.saveSlots;
-    }
+    //public SaveSlotList(InkTestingScript script) {
+    //    saveSlots = script.saveSlots;
+    //}
 }

@@ -65,8 +65,8 @@
     <Compile Include="Assets\Scripts\DeleteSave.cs" />
     <Compile Include="Assets\Scripts\InkScripts\InkTestingScript.cs" />
     <Compile Include="Assets\Scripts\MakePersistant.cs" />
+    <Compile Include="Assets\Scripts\MenuSystem.cs" />
     <Compile Include="Assets\Scripts\SaveData.cs" />
-    <Compile Include="Assets\Scripts\SaveSlotList.cs" />
     <Compile Include="Assets\Scripts\SaveSystem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

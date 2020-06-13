@@ -25,12 +25,12 @@ public class MakePersistant : MonoBehaviour
 
 
     }
-    private void Update()
-    {
-        if (SceneManager.GetActiveScene().name == "MainMenu")//or whatever our menu scene is called
-        {
-            Destroy(gameObject);
-        }
+    //private void Update()
+    //{
+    //    if (SceneManager.GetActiveScene().name == "MainMenu")//or whatever our menu scene is called
+    //    {
+    //        Destroy(gameObject);
+    //    }
 
-    }
+    //}
 }

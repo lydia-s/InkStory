@@ -13,25 +13,36 @@ public class InkTestingScript : MonoBehaviour
     private Story story;
     public TextMeshProUGUI storyText;
     public Button buttonPrefab;
-    public string storyState="";
+    public static string loadedState="";
+    public string storyState = "";
     public GameObject scrollList;
     public Button saveSlot;
     public bool hasLoadedButtons = false;
     public string currentScene;//name of scene
     public List<string> currentCharacters;//list of character names in scene
     public List<string> storyLog;//log of all previous text
+    public static bool justLoaded = false;
+    public GameObject saveMenu;
     // Start is called before the first frame update
     void Start()
     {
-        PopulateScrollList();
-        story = new Story(inkJSON.text);
-        storyState = story.state.ToJson();//save story state
-        //RefreshUI();
+        if (justLoaded == false)
+        {
+            story = new Story(inkJSON.text);
+           // storyState = story.state.ToJson();//save story state
+        }
+        else {
+            story = new Story(inkJSON.text);
+            storyState = loadedState;
+            story.state.LoadJson(storyState);
+            justLoaded = false;
+        }
+       
 
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && !saveMenu.activeSelf)
         {
             KeepLoadingStory();
         }
@@ -39,26 +50,7 @@ public class InkTestingScript : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// Populate a list with save slot buttons
-    /// </summary>
 
-    public void PopulateScrollList()
-    {
-        string folderpath = Application.persistentDataPath + "/" + "saves";
-        foreach (string filepath in Directory.GetFiles(folderpath))
-        {
-            string filename = filepath.Replace(folderpath, "").Replace(@"\", "").Replace(".story", "");//just get filename
-            CreateSaveSlot(filename);
-        }
-    }
-
-    //Reset the state of the story, bring it back to the beginning
-    public void ResetStoryState()
-    {
-        story.ResetState();
-        RefreshUI();
-    }
     /// <summary>
     /// Get scene name and characters from tags
     /// </summary>
@@ -148,6 +140,11 @@ public class InkTestingScript : MonoBehaviour
     /// <summary>
     /// Load an ink save state json string from a binary file 
     /// </summary>
+    /// 
+
+/*
+ * Saving methods
+ */
     public void LoadStory(string filename) {
         hasLoadedButtons = false;
         SaveData data = SaveSystem.LoadData(filename);
@@ -166,8 +163,8 @@ public class InkTestingScript : MonoBehaviour
     public void SaveStory() {
         string filename = GenerateFileName();
         storyState = story.state.ToJson();//save story state
-        SaveSystem.SaveData(this, filename);
-        CreateSaveSlot(filename);
+        SaveSystem.SaveData(this, filename);//save data to file on system
+        CreateSaveSlot(filename);//create save slot to load file
     }
     /// <summary>
     /// Generate unique filename
@@ -188,20 +185,23 @@ public class InkTestingScript : MonoBehaviour
     }
 
     /// <summary>
-    /// Spawn visible save slot in scroll list
+    /// Spawn new visible save slot in scroll list
     /// </summary>
-    public void CreateSaveSlot(string filename) {
+    public void CreateSaveSlot(string filename)
+    {
         Button newButton = Instantiate(saveSlot) as Button;
         newButton.transform.SetParent(scrollList.transform, false);
         newButton.GetComponentInChildren<Text>().text = filename;
-        newButton.onClick.AddListener(delegate {
+        newButton.onClick.AddListener(delegate
+        {
             string file = newButton.GetComponentInChildren<Text>().text;
             LoadStory(file);
+            saveMenu.SetActive(false);//get out of save menu
             RefreshUI();
         });
     }
 
 
 
-  
+
 }

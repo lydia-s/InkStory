@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - DeleteSave
     - InkTestingScript
+    - MenuSystem
     Unity.TextMeshPro.dll:
     - TMPro.TMP_ColorGradient
     - TMPro.TMP_FontAsset
@@ -27,6 +28,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.Mask
     - UnityEngine.UI.ScrollRect
@@ -34,7 +36,74 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Game.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9382}
+    - Class: 114
+      Script: {instanceID: 9384}
+    - Class: 114
+      Script: {instanceID: 9390}
+    - Class: 114
+      Script: {instanceID: 9396}
+    - Class: 114
+      Script: {instanceID: 9400}
+    - Class: 114
+      Script: {instanceID: 9404}
+    - Class: 114
+      Script: {instanceID: 9412}
+    - Class: 114
+      Script: {instanceID: 9430}
+    - Class: 114
+      Script: {instanceID: 9432}
+    - Class: 114
+      Script: {instanceID: 9440}
+    - Class: 114
+      Script: {instanceID: 9442}
+    - Class: 114
+      Script: {instanceID: 9452}
+    - Class: 114
+      Script: {instanceID: 9828}
+    - Class: 114
+      Script: {instanceID: 10074}
+    - Class: 114
+      Script: {instanceID: 10262}
+    - Class: 114
+      Script: {instanceID: 10440}
+    - Class: 114
+      Script: {instanceID: 13146}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/MainMenu.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -64,6 +133,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9396}
     - Class: 114
+      Script: {instanceID: 9400}
+    - Class: 114
       Script: {instanceID: 9404}
     - Class: 114
       Script: {instanceID: 9412}
@@ -78,21 +149,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9452}
     - Class: 114
-      Script: {instanceID: 9828}
-    - Class: 114
       Script: {instanceID: 9838}
     - Class: 114
-      Script: {instanceID: 10260}
+      Script: {instanceID: 10074}
     - Class: 114
-      Script: {instanceID: 10270}
+      Script: {instanceID: 10262}
     - Class: 114
-      Script: {instanceID: 10438}
+      Script: {instanceID: 10272}
     - Class: 114
-      Script: {instanceID: 10718}
+      Script: {instanceID: 10440}
     - Class: 114
-      Script: {instanceID: 10800}
+      Script: {instanceID: 10720}
     - Class: 114
-      Script: {instanceID: 22520}
+      Script: {instanceID: 10802}
+    - Class: 114
+      Script: {instanceID: 13146}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -596,7 +667,7 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: edea7ed80df58c0ba7967c4f476e32c9
+      Hash: b1d73b6a5762e0d9dad84bde64c40db7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InkTestingScript
@@ -678,6 +749,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 62e7e50f2f612c195a81cb399e21d7e0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DeleteSave
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -968,11 +1045,12 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 62e7e50f2f612c195a81cb399e21d7e0
+      Hash: 410a8c530d9d4cde8d5805cde8ed0ee8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: DeleteSave
+    className: MenuSystem
   platform: 19
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/MainMenu.unity
+  - Assets/Scenes/Game.unity
   playerPath: C:/Users/Savoullis/Documents/UnityProjects/InkTutorial/playtest/InkTutorial.exe

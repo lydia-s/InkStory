@@ -1,0 +1,392 @@
+fileFormatVersion: 2
+guid: cc4dbe6e0c9a0f2448a7106427d83c17
+timeCreated: 1542023637
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: LollipopP_4k_0
+    21300002: LollipopP_4k_2
+    21300004: LollipopP_4k_3
+    21300006: LollipopP_4k_4
+    21300008: LollipopP_4k_5
+    21300010: LollipopP_4k_1
+    21300012: LollipopP_4k_6
+    21300014: LollipopP_4k_8
+    21300016: LollipopP_4k_7
+    21300018: LollipopP_4k_9
+    21300020: LollipopP_4k_10
+    21300022: LollipopP_4k_11
+    21300024: LollipopP_4k_12
+    21300026: LollipopP_4k_13
+    21300028: LollipopP_4k_11
+    21300030: LollipopP_4k_15
+    21300032: LollipopP_4k_16
+    21300034: LollipopP_4k_17
+    21300036: LollipopP_4k_18
+    21300038: LollipopP_4k_10
+    21300040: LollipopP_4k_12
+    21300042: LollipopP_4k_13
+    21300044: LollipopP_4k_16
+    21300046: LollipopP_4k_17
+    21300048: LollipopP_4k_18
+    21300050: LollipopP_4k_19
+    21300052: LollipopP_4k_14
+    21300054: LollipopP_4k_20
+    21300056: LollipopP_4k_15
+    21300058: LollipopP_4k_21
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 400
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 4096
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LollipopP_4k_0
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3394
+        width: 1273
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 99, y: 86, z: 87, w: 88}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_2
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 2755
+        width: 1283
+        height: 1277
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 110, y: 90, z: 106, w: 96}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_3
+      rect:
+        serializedVersion: 2
+        x: 2663
+        y: 2763
+        width: 642
+        height: 1272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 94, y: 98, z: 87, w: 103}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_4
+      rect:
+        serializedVersion: 2
+        x: 3336
+        y: 2762
+        width: 335
+        height: 1272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 106, y: 95, z: 91, w: 94}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_5
+      rect:
+        serializedVersion: 2
+        x: 3696
+        y: 3708
+        width: 329
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 89, y: 78, z: 75, w: 73}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 3052
+        width: 1273
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 107, y: 81, z: 115, w: 95}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_6
+      rect:
+        serializedVersion: 2
+        x: 3700
+        y: 3349
+        width: 328
+        height: 328
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2692
+        width: 329
+        height: 329
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_7
+      rect:
+        serializedVersion: 2
+        x: 3705
+        y: 2902
+        width: 264
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_9
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 1495
+        width: 1238
+        height: 1240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_11
+      rect:
+        serializedVersion: 2
+        x: 3402
+        y: 2106
+        width: 629
+        height: 629
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_10
+      rect:
+        serializedVersion: 2
+        x: 2134
+        y: 1365
+        width: 1238
+        height: 1240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_12
+      rect:
+        serializedVersion: 2
+        x: 3402
+        y: 1365
+        width: 629
+        height: 629
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1079
+        width: 329
+        height: 329
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_16
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 68
+        width: 1271
+        height: 1264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 110, y: 102, z: 94, w: 95}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_17
+      rect:
+        serializedVersion: 2
+        x: 2664
+        y: 65
+        width: 641
+        height: 1272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 93, y: 101, z: 83, w: 92}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_18
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 64
+        width: 322
+        height: 1274
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 89, y: 104, z: 80, w: 97}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_19
+      rect:
+        serializedVersion: 2
+        x: 3705
+        y: 780
+        width: 264
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_14
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 727
+        width: 1273
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 107, y: 89, z: 103, w: 79}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_20
+      rect:
+        serializedVersion: 2
+        x: 3700
+        y: 423
+        width: 328
+        height: 328
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_15
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 66
+        width: 1273
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 103, y: 92, z: 91, w: 83}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: LollipopP_4k_21
+      rect:
+        serializedVersion: 2
+        x: 3696
+        y: 71
+        width: 329
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 89, y: 79, z: 79, w: 68}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

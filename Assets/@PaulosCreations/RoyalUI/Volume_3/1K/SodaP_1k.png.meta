@@ -1,0 +1,388 @@
+fileFormatVersion: 2
+guid: e21aed9039269304db776ebab57df438
+timeCreated: 1542022973
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SodaP_1k_0
+    21300002: SodaP_1k_2
+    21300004: SodaP_1k_3
+    21300006: SodaP_1k_4
+    21300008: SodaP_1k_5
+    21300010: SodaP_1k_1
+    21300012: SodaP_1k_6
+    21300014: SodaP_1k_8
+    21300016: SodaP_1k_7
+    21300018: SodaP_1k_9
+    21300020: SodaP_1k_10
+    21300022: SodaP_1k_11
+    21300024: SodaP_1k_11
+    21300026: SodaP_1k_13
+    21300028: SodaP_1k_14
+    21300030: SodaP_1k_10
+    21300032: SodaP_1k_12
+    21300034: SodaP_1k_13
+    21300036: SodaP_1k_16
+    21300038: SodaP_1k_17
+    21300040: SodaP_1k_18
+    21300042: SodaP_1k_19
+    21300044: SodaP_1k_14
+    21300046: SodaP_1k_20
+    21300048: SodaP_1k_15
+    21300050: SodaP_1k_21
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 1024
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SodaP_1k_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 848
+        width: 319
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 24, y: 20, z: 23, w: 20}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_2
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 692
+        width: 315
+        height: 315
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 23, y: 19, z: 22, w: 22}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_3
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 691
+        width: 160
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 23, y: 19, z: 23, w: 22}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_4
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 688
+        width: 80
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 22, y: 25, z: 19, w: 26}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_5
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 927
+        width: 83
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 19, y: 14, z: 21, w: 15}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 763
+        width: 320
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 24, y: 18, z: 23, w: 20}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_6
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 836
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 672
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_7
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 727
+        width: 64
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_9
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 376
+        width: 308
+        height: 306
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_11
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 527
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_10
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 343
+        width: 308
+        height: 306
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_12
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 340
+        width: 156
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 268
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_16
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 16
+        width: 315
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 23, y: 23, z: 20, w: 19}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_17
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 16
+        width: 160
+        height: 320
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 25, y: 24, z: 22, w: 23}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_18
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 17
+        width: 81
+        height: 319
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 23, y: 22, z: 21, w: 23}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_19
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 196
+        width: 64
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 180
+        width: 320
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 26, y: 23, z: 25, w: 22}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_20
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 104
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_15
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 320
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 26, y: 24, z: 25, w: 19}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_1k_21
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 18
+        width: 84
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 20, y: 16, z: 19, w: 18}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

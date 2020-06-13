@@ -46,7 +46,7 @@ public class InkTestingScript : MonoBehaviour
         {
             KeepLoadingStory();
         }
-
+        
 
     }
 
@@ -78,6 +78,7 @@ public class InkTestingScript : MonoBehaviour
             storyText.text = text;
             storyLog.Add(text);//add to log
             UpadateSceneAndCharacters();
+            storyState = story.state.ToJson();
         }
         else
         {

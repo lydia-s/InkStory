@@ -27,6 +27,10 @@ public class MenuSystem : MonoBehaviour
     {
         Application.Quit();
     }
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 
 
     /// <summary>
@@ -56,6 +60,7 @@ public class MenuSystem : MonoBehaviour
             SaveData data = SaveSystem.LoadData(filename);
             string savedState = data.saveState;
             InkTestingScript.loadedState = savedState;
+            InkTestingScript.justLoaded = true;
             SceneManager.LoadScene("Game");
             saveSlotMenu.SetActive(false);
         });

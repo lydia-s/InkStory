@@ -1,0 +1,388 @@
+fileFormatVersion: 2
+guid: 1446c25fc54c9d54785dbf6ae0c17777
+timeCreated: 1542023735
+licenseType: Store
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SodaP_4k_0
+    21300002: SodaP_4k_2
+    21300004: SodaP_4k_3
+    21300006: SodaP_4k_4
+    21300008: SodaP_4k_5
+    21300010: SodaP_4k_1
+    21300012: SodaP_4k_6
+    21300014: SodaP_4k_8
+    21300016: SodaP_4k_7
+    21300018: SodaP_4k_9
+    21300020: SodaP_4k_10
+    21300022: SodaP_4k_11
+    21300024: SodaP_4k_11
+    21300026: SodaP_4k_13
+    21300028: SodaP_4k_14
+    21300030: SodaP_4k_10
+    21300032: SodaP_4k_12
+    21300034: SodaP_4k_13
+    21300036: SodaP_4k_16
+    21300038: SodaP_4k_17
+    21300040: SodaP_4k_18
+    21300042: SodaP_4k_19
+    21300044: SodaP_4k_14
+    21300046: SodaP_4k_20
+    21300048: SodaP_4k_15
+    21300050: SodaP_4k_21
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 400
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 4096
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SodaP_4k_0
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 3394
+        width: 1272
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 107, y: 79, z: 88, w: 98}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_2
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 2759
+        width: 1269
+        height: 1273
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 107, y: 107, z: 88, w: 92}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_3
+      rect:
+        serializedVersion: 2
+        x: 2665
+        y: 2763
+        width: 640
+        height: 1272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 94, y: 81, z: 87, w: 92}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_4
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 2762
+        width: 322
+        height: 1272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 87, y: 89, z: 79, w: 98}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_5
+      rect:
+        serializedVersion: 2
+        x: 3698
+        y: 3708
+        width: 327
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 83, y: 76, z: 74, w: 71}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 3052
+        width: 1273
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 112, y: 88, z: 92, w: 85}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_6
+      rect:
+        serializedVersion: 2
+        x: 3700
+        y: 3348
+        width: 328
+        height: 329
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2693
+        width: 329
+        height: 328
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_7
+      rect:
+        serializedVersion: 2
+        x: 3705
+        y: 2902
+        width: 264
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_9
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 1498
+        width: 1236
+        height: 1236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_11
+      rect:
+        serializedVersion: 2
+        x: 3402
+        y: 2106
+        width: 629
+        height: 629
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_10
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 1366
+        width: 1236
+        height: 1236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_12
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 1365
+        width: 629
+        height: 629
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_13
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1079
+        width: 328
+        height: 328
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_16
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 69
+        width: 1277
+        height: 1263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 104, y: 98, z: 93, w: 92}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_17
+      rect:
+        serializedVersion: 2
+        x: 2667
+        y: 65
+        width: 641
+        height: 1272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 100, y: 98, z: 82, w: 86}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_18
+      rect:
+        serializedVersion: 2
+        x: 3344
+        y: 66
+        width: 321
+        height: 1272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 81, y: 97, z: 73, w: 94}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_19
+      rect:
+        serializedVersion: 2
+        x: 3707
+        y: 780
+        width: 263
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_14
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 727
+        width: 1272
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 117, y: 85, z: 89, w: 74}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_20
+      rect:
+        serializedVersion: 2
+        x: 3702
+        y: 423
+        width: 328
+        height: 328
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_15
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 66
+        width: 1273
+        height: 640
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 102, y: 93, z: 91, w: 73}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SodaP_4k_21
+      rect:
+        serializedVersion: 2
+        x: 3700
+        y: 71
+        width: 328
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 88, y: 70, z: 73, w: 62}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

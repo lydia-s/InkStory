@@ -23,6 +23,8 @@ public class InkTestingScript : MonoBehaviour
     public List<string> storyLog;//log of all previous text
     public static bool justLoaded = false;
     public GameObject saveMenu;
+    public GameObject textLogBox;
+    public GameObject textLogList;
     // Start is called before the first frame update
     void Start()
     {
@@ -76,7 +78,7 @@ public class InkTestingScript : MonoBehaviour
             
             string text = story.Continue();
             storyText.text = text;
-            storyLog.Add(text);//add to log
+            AddToTextLog(text);//log all text
             UpadateSceneAndCharacters();
             storyState = story.state.ToJson();
         }
@@ -90,6 +92,15 @@ public class InkTestingScript : MonoBehaviour
 
             }
         }
+    }
+    public void AddToTextLog(string text) {
+        storyLog.Add(text);//add current string to save list
+        GameObject txt = Instantiate(textLogBox) as GameObject;
+        txt.transform.SetParent(textLogList.transform, false);
+        txt.GetComponent<Text>().text = text;
+       // storyLogText.text = storyLogText.text + "\n" + text;
+
+
     }
 
     /// <summary>

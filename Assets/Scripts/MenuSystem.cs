@@ -10,6 +10,8 @@ public class MenuSystem : MonoBehaviour
     public Button saveSlot;
     public GameObject scrollList;
     public GameObject saveSlotMenu;
+    public GameObject textLog;
+    public GameObject background;
     public void LoadNewGame() {
         SceneManager.LoadScene("Game");
     }
@@ -30,6 +32,9 @@ public class MenuSystem : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+    public void SpawnTextLog() {
+        textLog.SetActive(true);
     }
 
 

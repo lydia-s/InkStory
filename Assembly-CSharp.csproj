@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\DeleteSave.cs" />
+    <Compile Include="Assets\Scripts\DestroyMe.cs" />
     <Compile Include="Assets\Scripts\InkScripts\InkTestingScript.cs" />
     <Compile Include="Assets\Scripts\MakePersistant.cs" />
     <Compile Include="Assets\Scripts\MenuSystem.cs" />

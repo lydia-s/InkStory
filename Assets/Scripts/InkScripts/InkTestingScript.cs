@@ -25,6 +25,8 @@ public class InkTestingScript : MonoBehaviour
     public GameObject saveMenu;
     public GameObject textLogBox;
     public GameObject textLogList;
+    public float delay = 0.001f;
+    public bool finishedTyping = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,14 +46,11 @@ public class InkTestingScript : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1) && !saveMenu.activeSelf)
+        if (Input.GetMouseButtonDown(1) && !saveMenu.activeSelf && finishedTyping)
         {
             KeepLoadingStory();
         }
-        
-
     }
-
 
     /// <summary>
     /// Get scene name and characters from tags
@@ -77,7 +76,8 @@ public class InkTestingScript : MonoBehaviour
         {
             
             string text = story.Continue();
-            storyText.text = text;
+            //storyText.text = text;
+            StartCoroutine(WriteText(text));
             AddToTextLog(text);//log all text
             UpadateSceneAndCharacters();
             storyState = story.state.ToJson();
@@ -93,14 +93,28 @@ public class InkTestingScript : MonoBehaviour
             }
         }
     }
+    /// <summary>
+    /// Create 'typewriter' effect when writing out passage
+    /// </summary>
+    /// <param name="passage"></param>
+    /// <returns></returns>
+    IEnumerator WriteText(string passage) {
+        finishedTyping = false;
+        for (int i =0; i< passage.Length; i++) {
+            storyText.text = passage.Substring(0,i);
+            yield return new WaitForSeconds(delay);
+        }
+        finishedTyping = true;
+    }
+    /// <summary>
+    /// Add story dialogue to scroll list log
+    /// </summary>
+    /// <param name="text"></param>
     public void AddToTextLog(string text) {
         storyLog.Add(text);//add current string to save list
         GameObject txt = Instantiate(textLogBox) as GameObject;
         txt.transform.SetParent(textLogList.transform, false);
         txt.GetComponent<Text>().text = text;
-       // storyLogText.text = storyLogText.text + "\n" + text;
-
-
     }
 
     /// <summary>

@@ -27,6 +27,9 @@ public class InkTestingScript : MonoBehaviour
     public GameObject textLogList;
     public float delay = 0.001f;
     public bool finishedTyping = true;
+    public GameObject background;
+    public GameObject stage;
+    public GameObject characterBox;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,8 +66,10 @@ public class InkTestingScript : MonoBehaviour
             for (int i = 1; i < tags.Count; i++) {
                 currentCharacters.Add(tags[i]);
             }
-
+            ChangeScene(tags[0]);
+            ChangeCharacters(tags[1]);
         }
+        
 
     }
     /// <summary>
@@ -116,7 +121,23 @@ public class InkTestingScript : MonoBehaviour
         txt.transform.SetParent(textLogList.transform, false);
         txt.GetComponent<Text>().text = text;
     }
-
+    /// <summary>
+    /// Change scene image
+    /// </summary>
+    /// <param name="image"></param>
+    public void ChangeScene(string image) {
+        background.GetComponent<Image>().sprite = Resources.Load<Sprite>(image);//load image from resources
+    }
+    /// <summary>
+    /// Change scene image
+    /// </summary>
+    /// <param name="image"></param>
+    public void ChangeCharacters(string character)
+    {
+        GameObject charPlaceholder = Instantiate(characterBox) as GameObject;
+        charPlaceholder.transform.SetParent(stage.transform, false);
+        charPlaceholder.GetComponent<Image>().sprite = Resources.Load<Sprite>(character);//load image from resources
+    }
     /// <summary>
     /// Load buttons instantiates a save slot to a list and gives it a listener
     /// </summary>

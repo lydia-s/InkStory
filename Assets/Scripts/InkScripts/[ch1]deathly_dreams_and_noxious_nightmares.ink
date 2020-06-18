@@ -5,14 +5,14 @@ VAR herbalist = "Emilia"
 VAR priest = "Father Gregor"
 VAR wizard = "Kasien"
  
-I trudged through the forest, wind whipped my hair and chilled my skin.#forest#Lydia#Kasien#Emilia#Fred#Mabel#Jasper#Gregoire
+I trudged through the forest, wind whipped my hair and chilled my skin.#forest#Emilia
 My legs ached, it was a torment I was quite familiar with. As a soldier I'd marched for days with no sleep, little food or water.
-I'd fought for my country and when it was all over they tossed me aside like a blunted sword.
+I'd fought for my country and when it was all over they tossed me aside like a blunted sword.#forest#Fred
 There was peace now, no one knew for how long. At least what the kings considered peace. We still had to pick up the pieces, restore the aftermath.
 For me there was no rest. Now I was just another man, I had no income, no food, no roof over my head. I was forced to move from town to town seeking refuge and work. 
 People were not as friendly as I'd hoped, but that was life.
 I navigated rocky terrain, uncertain of my bearings. I spotted a stream and knew this was my chance. There were usually settlings by water sources, if I could get to the end of this one I would strike gold.
-As I travelled my throat grew dry. The cold crisp water of the stream was so tempting. I'd been drinking stale water from my pack for days.
+As I travelled my throat grew dry. The cold crisp water of the stream was so tempting. I'd been drinking stale water from my pack for days.#path
 
 *[drink water from stream] ->drank_from_stream
 *[drink water from pack] -> shortcut_to_village

@@ -58,19 +58,31 @@ public class InkTestingScript : MonoBehaviour
     /// <summary>
     /// Get scene name and characters from tags
     /// </summary>
-    public void UpadateSceneAndCharacters() {
+    public void UpdateSceneAndCharacters() {
         List<string> tags = story.currentTags;
         if (tags.Count > 0)
         {
-            currentScene = tags[0];;
+            ClearStage();
+            currentScene = tags[0];
+            ChangeScene(tags[0]);
             for (int i = 1; i < tags.Count; i++) {
                 currentCharacters.Add(tags[i]);
+                ChangeCharacters(tags[i]);
             }
-            ChangeScene(tags[0]);
-            ChangeCharacters(tags[1]);
+            
+            
         }
         
 
+    }
+    /// <summary>
+    /// Remove all the characters from the stage
+    /// </summary>
+    public void ClearStage() {
+        for (int i = 0; i < stage.transform.childCount; i++)
+        {
+            Destroy(stage.transform.GetChild(i).gameObject);
+        }
     }
     /// <summary>
     /// Continue loading story until a choice is available
@@ -84,7 +96,7 @@ public class InkTestingScript : MonoBehaviour
             //storyText.text = text;
             StartCoroutine(WriteText(text));
             AddToTextLog(text);//log all text
-            UpadateSceneAndCharacters();
+            UpdateSceneAndCharacters();
             storyState = story.state.ToJson();
         }
         else
@@ -94,7 +106,6 @@ public class InkTestingScript : MonoBehaviour
             {
                 hasLoadedButtons = true;
                 LoadButtons();
-
             }
         }
     }

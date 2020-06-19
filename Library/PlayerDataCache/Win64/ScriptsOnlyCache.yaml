@@ -696,7 +696,7 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: ab6e421e5cec7c7fa02ae567bf574ffc
+      Hash: 9b67b1542f5c4c5ec0900357600b1a70
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InkTestingScript

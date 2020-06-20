@@ -26,15 +26,4 @@ MonoBehaviour:
     jsonAssetPath: {fileID: 0}
     jsonAsset: {fileID: 4900000, guid: 6cf48bb6d89824cc69e35b43f9a1aca6, type: 3}
   pendingCompilationStack: []
-  compilationStack:
-  - state: 1
-    inkFile:
-      compileAutomatically: 0
-      inkAsset: {fileID: 102900000, guid: f95866f81375e414e8506062cf093475, type: 3}
-      jsonAssetPath: {fileID: 0}
-      jsonAsset: {fileID: 4900000, guid: b8760caa2cafb07429b5592bf33889f3, type: 3}
-    compiledJson: 
-    inkAbsoluteFilePath: C:/Users/Savoullis/Documents/UnityProjects/InkStory/Assets/Scripts/InkScripts/[ch1]deathly_dreams_and_noxious_nightmares.ink
-    jsonAbsoluteFilePath: Assets/Scripts/InkScripts/[ch1]deathly_dreams_and_noxious_nightmares.json
-    output: []
-    unhandledErrorOutput: []
+  compilationStack: []

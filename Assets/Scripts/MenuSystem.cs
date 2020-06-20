@@ -10,34 +10,46 @@ public class MenuSystem : MonoBehaviour
     public Button saveSlot;
     public GameObject scrollList;
     public GameObject saveSlotMenu;
-    public GameObject textLog;
-    public GameObject background;
+    /// <summary>
+    /// Load scene 'Game'
+    /// </summary>
     public void LoadNewGame() {
         SceneManager.LoadScene("Game");
     }
+    /// <summary>
+    /// Set saves object active
+    /// </summary>
     public void LoadSaves()
     {
         saveSlotMenu.SetActive(true);
     }
+    /// <summary>
+    /// Set saves object inactive
+    /// </summary>
     public void LoadOutOfSaves() {
         saveSlotMenu.SetActive(false);
     }
+
+    /// <summary>
+    /// Yet to implement an options menu
+    /// </summary>
     public void LoadOptions()
     {
     }
+    /// <summary>
+    /// Close application
+    /// </summary>
     public void Quit()
     {
         Application.Quit();
     }
+    /// <summary>
+    /// Load menu scene
+    /// </summary>
     public void LoadMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
-    public void SpawnTextLog() {
-        textLog.SetActive(true);
-    }
-
-
     /// <summary>
     /// Populate a list with save slot buttons
     /// *loads existing files*
@@ -63,8 +75,10 @@ public class MenuSystem : MonoBehaviour
         newButton.onClick.AddListener(delegate {
             string file = newButton.GetComponentInChildren<Text>().text;
             SaveData data = SaveSystem.LoadData(filename);
-            string savedState = data.saveState;
-            InkTestingScript.loadedState = savedState;
+            InkTestingScript.loadedTextLog = data.storyLog;
+            InkTestingScript.loadedChars = data.currentCharacters;
+            InkTestingScript.loadedScene = data.currentScene;
+            InkTestingScript.loadedState = data.saveState;
             InkTestingScript.justLoaded = true;
             SceneManager.LoadScene("Game");
             saveSlotMenu.SetActive(false);

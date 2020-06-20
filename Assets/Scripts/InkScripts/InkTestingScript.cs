@@ -9,44 +9,56 @@ using System.IO;
 
 public class InkTestingScript : MonoBehaviour
 {
-    public TextAsset inkJSON;
-    private Story story;
-    public TextMeshProUGUI storyText;
-    public Button buttonPrefab;
-    public static string loadedState="";
-    public string storyState = "";
-    public GameObject scrollList;
-    public Button saveSlot;
+
+    //On Load Variables
+    public static string loadedState;
+    public static string loadedScene;
+    public static List<string> loadedChars;
+    public static List<string> loadedTextLog;
     public bool hasLoadedButtons = false;
-    public string currentScene;//name of scene
+    public static bool justLoaded = false;
+    //On Load Variables
+
+    //Current Variables(these get saved)
     public List<string> currentCharacters;//list of character names in scene
     public List<string> storyLog;//log of all previous text
-    public static bool justLoaded = false;
+    public string currentScene;//name of scene
+    public string storyState;
+    //Current Variables
+
+    //objects
+    public TextMeshProUGUI storyText;
+    public Button buttonPrefab;
+    public GameObject scrollList;
+    public Button saveSlot;
     public GameObject saveMenu;
     public GameObject textLogBox;
     public GameObject textLogList;
-    public float delay = 0.001f;
-    public bool finishedTyping = true;
     public GameObject background;
     public GameObject stage;
     public GameObject characterBox;
+    //objects
+    public TextAsset inkJSON;
+    private Story story;
+    public float delay = 0.001f;
+    public bool finishedTyping = true;
+
     // Start is called before the first frame update
     void Start()
     {
-        if (justLoaded == false)
+        story = new Story(inkJSON.text);
+        if (justLoaded == true)
         {
-            story = new Story(inkJSON.text);
-           // storyState = story.state.ToJson();//save story state
-        }
-        else {
-            story = new Story(inkJSON.text);
             storyState = loadedState;
             story.state.LoadJson(storyState);
+            LoadSceneAndCharacters();//load scene and characters
+            LoadTextLogContent();//load text log
             justLoaded = false;
         }
        
 
     }
+   
     private void Update()
     {
         if (Input.GetMouseButtonDown(1) && !saveMenu.activeSelf && finishedTyping)
@@ -55,6 +67,21 @@ public class InkTestingScript : MonoBehaviour
         }
     }
 
+    #region Characters and scene
+    /// <summary>
+    /// Set stage and background on load
+    /// </summary>
+    public void LoadSceneAndCharacters()
+    {
+        currentCharacters.Clear();
+        ClearStage();
+        ChangeScene(loadedScene);
+        for (int i = 0; i < loadedChars.Count; i++)
+        {
+            currentCharacters.Add(loadedChars[i]);
+        }
+        RefreshCharacters();
+    }
     /// <summary>
     /// Get scene name and characters from tags
     /// </summary>
@@ -62,18 +89,17 @@ public class InkTestingScript : MonoBehaviour
         List<string> tags = story.currentTags;
         if (tags.Count > 0)
         {
-            ClearStage();
-            currentScene = tags[0];
-            ChangeScene(tags[0]);
-            for (int i = 1; i < tags.Count; i++) {
-                currentCharacters.Add(tags[i]);
-                ChangeCharacters(tags[i]);
+            ChangeScene(tags[0]);//change the scene
+            //if tags is more than 1, there is also a character change
+            if (tags.Count > 1) {
+                currentCharacters.Clear();
+                for (int i = 1; i < tags.Count; i++)
+                {
+                    currentCharacters.Add(tags[i]);
+                }
+                RefreshCharacters();
             }
-            
-            
         }
-        
-
     }
     /// <summary>
     /// Remove all the characters from the stage
@@ -84,6 +110,44 @@ public class InkTestingScript : MonoBehaviour
             Destroy(stage.transform.GetChild(i).gameObject);
         }
     }
+   
+   
+    /// <summary>
+    /// Change scene image
+    /// </summary>
+    /// <param name="image"></param>
+    public void ChangeScene(string image) {
+        currentScene = image;
+        background.GetComponent<Image>().sprite = Resources.Load<Sprite>(image);//load image from resources
+    }
+    /// <summary>
+    /// Change scene image
+    /// </summary>
+    /// <param name="image"></param>
+    public void ChangeCharacter(string character)
+    {
+        GameObject charPlaceholder = Instantiate(characterBox) as GameObject;
+        charPlaceholder.transform.SetParent(stage.transform, false);
+        charPlaceholder.GetComponent<Image>().sprite = Resources.Load<Sprite>(character);//load image from resources
+    }
+    /// <summary>
+    /// Clear the stage and then add all current characters
+    /// </summary>
+    public void RefreshCharacters() {
+        ClearStage();
+        for (int i =0; i<currentCharacters.Count; i++) {
+            ChangeCharacter(currentCharacters[i]);
+        }
+    }
+
+    #endregion
+
+    #region Dialogue methods
+    public void LoadTextLogContent() {
+        foreach(string s in loadedTextLog) {
+            AddToTextLog(s);
+        }
+    }
     /// <summary>
     /// Continue loading story until a choice is available
     /// </summary>
@@ -91,7 +155,7 @@ public class InkTestingScript : MonoBehaviour
     {
         if (story.canContinue)
         {
-            
+
             string text = story.Continue();
             //storyText.text = text;
             StartCoroutine(WriteText(text));
@@ -109,15 +173,18 @@ public class InkTestingScript : MonoBehaviour
             }
         }
     }
+
     /// <summary>
     /// Create 'typewriter' effect when writing out passage
     /// </summary>
     /// <param name="passage"></param>
     /// <returns></returns>
-    IEnumerator WriteText(string passage) {
+    IEnumerator WriteText(string passage)
+    {
         finishedTyping = false;
-        for (int i =0; i< passage.Length; i++) {
-            storyText.text = passage.Substring(0,i);
+        for (int i = 0; i < passage.Length; i++)
+        {
+            storyText.text = passage.Substring(0, i);
             yield return new WaitForSeconds(delay);
         }
         finishedTyping = true;
@@ -126,33 +193,18 @@ public class InkTestingScript : MonoBehaviour
     /// Add story dialogue to scroll list log
     /// </summary>
     /// <param name="text"></param>
-    public void AddToTextLog(string text) {
+    public void AddToTextLog(string text)
+    {
         storyLog.Add(text);//add current string to save list
         GameObject txt = Instantiate(textLogBox) as GameObject;
         txt.transform.SetParent(textLogList.transform, false);
         txt.GetComponent<Text>().text = text;
     }
     /// <summary>
-    /// Change scene image
-    /// </summary>
-    /// <param name="image"></param>
-    public void ChangeScene(string image) {
-        background.GetComponent<Image>().sprite = Resources.Load<Sprite>(image);//load image from resources
-    }
-    /// <summary>
-    /// Change scene image
-    /// </summary>
-    /// <param name="image"></param>
-    public void ChangeCharacters(string character)
-    {
-        GameObject charPlaceholder = Instantiate(characterBox) as GameObject;
-        charPlaceholder.transform.SetParent(stage.transform, false);
-        charPlaceholder.GetComponent<Image>().sprite = Resources.Load<Sprite>(character);//load image from resources
-    }
-    /// <summary>
     /// Load buttons instantiates a save slot to a list and gives it a listener
     /// </summary>
-    public void LoadButtons() {
+    public void LoadButtons()
+    {
         foreach (Choice choice in story.currentChoices)
         {
 
@@ -162,10 +214,34 @@ public class InkTestingScript : MonoBehaviour
             choiceButton.transform.SetParent(this.transform, false);
             choiceButton.onClick.AddListener(delegate {
                 ChooseStoryChoice(choice);
-                
+
             });
-            
+
         }
+    }
+    
+    /// <summary>
+    /// Select the corresponding choice in ink as the button pressed
+    /// </summary>
+    /// <param name="choice"></param>
+    void ChooseStoryChoice(Choice choice)
+    {
+        story.ChooseChoiceIndex(choice.index);
+        RefreshUI();
+    }
+    #endregion
+
+    #region UI methods
+    /// <summary>
+    /// Destroy buttons that are children of the choices object
+    /// </summary>
+    void EraseUI()
+    {
+        for (int i = 0; i < this.transform.childCount; i++)
+        {
+            Destroy(this.transform.GetChild(i).gameObject);
+        }
+        storyText.text = "";
     }
     /// <summary>
     /// Refresh the UI after a load or button press
@@ -175,34 +251,10 @@ public class InkTestingScript : MonoBehaviour
         hasLoadedButtons = false;
         EraseUI();
     }
-    /// <summary>
-    /// Select the corresponding choice in ink as the button pressed
-    /// </summary>
-    /// <param name="choice"></param>
-    void ChooseStoryChoice(Choice choice)
-    {
-        story.ChooseChoiceIndex(choice.index);
-        RefreshUI();  
-    }
-    /// <summary>
-    /// Destroy buttons that are children of the choices object
-    /// </summary>
-    void EraseUI()
-    {
-        for (int i = 0; i< this.transform.childCount; i++)
-        {
-            Destroy(this.transform.GetChild(i).gameObject);
-        }
-        storyText.text = "";
-    }
-    /// <summary>
-    /// Load an ink save state json string from a binary file 
-    /// </summary>
-    /// 
 
-/*
- * Saving methods
- */
+    #endregion
+
+    #region Saving methods
     public void LoadStory(string filename) {
         hasLoadedButtons = false;
         SaveData data = SaveSystem.LoadData(filename);
@@ -259,7 +311,7 @@ public class InkTestingScript : MonoBehaviour
         });
     }
 
-
+    #endregion
 
 
 }

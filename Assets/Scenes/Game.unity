@@ -498,28 +498,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68fbdff4ad66e3e4296d9b9728428b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inkJSON: {fileID: 4900000, guid: b8760caa2cafb07429b5592bf33889f3, type: 3}
+  hasLoadedButtons: 0
+  currentCharacters: []
+  storyLog: []
+  currentScene: 
+  storyState: 
   storyText: {fileID: 1282748250}
   buttonPrefab: {fileID: 3195727536335325063, guid: b382450f01aba75438fe22889140e3f2,
     type: 3}
-  storyState: 
   scrollList: {fileID: 1148534273}
   saveSlot: {fileID: 6686483595649287865, guid: b76b0d456090133418e06af3abf23a99,
     type: 3}
-  hasLoadedButtons: 0
-  currentScene: 
-  currentCharacters: []
-  storyLog: []
   saveMenu: {fileID: 3736305}
   textLogBox: {fileID: 7532719249480246857, guid: b58eccf36c7218640b0712f54fd5e291,
     type: 3}
   textLogList: {fileID: 229235844}
-  delay: 0.001
-  finishedTyping: 1
   background: {fileID: 896676026}
   stage: {fileID: 1696498669}
   characterBox: {fileID: 6510013986100313651, guid: 79abf5c5f32856240990ca244dafad6f,
     type: 3}
+  inkJSON: {fileID: 4900000, guid: b8760caa2cafb07429b5592bf33889f3, type: 3}
+  delay: 0.001
+  finishedTyping: 1
   lastFilename: 
 --- !u!114 &512834363
 MonoBehaviour:
